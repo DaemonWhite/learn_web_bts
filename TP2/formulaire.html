@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+</head>
+<body>
+
+    <form method="post" name="inscriprion" action="destination.html">
+        <fieldset>
+            <legend>Vos donnée personnelles</legend>
+            <label for="nom">Nom</label>
+            <input id="nom" type="text" placeholder="Votre Nom">
+            <br>
+            <label for="prenom">Prénom</label>
+            <input id="prenom" type="text" placeholder="Votre prénom">
+            <br>
+            <label for="date">Date de naissance</label>
+            <input id="date" type="date">
+            <fieldset>
+                <legend>Lieu de naisannce</legend>
+                <input type="radio" name="civilite" id="chemille" value="chemille" >
+                <label for="chemille">Chemillé</label>
+                <input type="radio" name="civilite" id="world" value="world" >
+                <label for="world">Reste du monde</label>
+            </fieldset>
+            <label for="adressPostal">Adresse postale</label>
+            <textarea name="adressPostal" id="adressPostal" cols="30" rows="2" placeholder="Votre address"></textarea>
+            <br>
+            <label for="codePostal">Code postal</label>
+            <input type="text" id="codePostal" pattern="[0-9]{5}"  placeholder="ex : 49120">
+            <br>
+            <label for="pageperso">Page personnelles</label>
+            <input type="text" id="pageperso" >
+            <br>
+            <label for="telpeso">Telephone personnelles</label>
+            <input type="text" id="telpeso" placeholder="0681543698" pattern="0[6-7]{1}[0-9]{8}">
+            <br>
+            <label for="Semestre">Semestre</label>
+            <select name="Semestre" id="Semestre">
+                <option>S1</option>
+                <option selected>S2</option>
+            </select>
+            <br>
+            html
+            <input type="range" value="0">
+            <fieldset>
+                <legend>Conaissance</legend>
+                <input type="checkbox" name="html" id="html" value="html" checked >
+                <label for="html">HTML</label>
+                <input type="checkbox" name="CSS" id="CSS" value="CSS" >
+                <label for="CSS">CSS</label>
+                <input type="checkbox" name="FORMU" id="FORMU" value="FORMU" >
+                <label for="FORMU">Formulaire</label>
+                <input type="checkbox" name="JS" id="JS" value="JS" >
+                <label for="JS">JavaScript</label>
+            </fieldset>
+
+            <input type="submit">
+            <input type="reset">
+
+        </fieldset>
+    </form>
+    
+</body>
+</html>

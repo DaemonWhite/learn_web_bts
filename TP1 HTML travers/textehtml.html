@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Premier Programe</title>
+    </head>
+    <body>
+            <a href="#creer">Créations de liens html</a><br>
+            <a href="#extern">Liens externes</a><br>
+            <a href="#target">Atribut target</a><br>
+            <a href="#ancre">Liens ancres</a><br>
+
+            <h2 id="creer"> Création de liens en HTML  </h2>
+            Quelque soit le type de liens que l'on souhaite créer en HTML (liens internes, des liens externes, ou des liens vers un autre endroit d'une même page), nous utiliserons toujours l'élément a qui est l'abréviation de "anchor" ou "ancre" en français accompagné de son attribut href pour "hypertext reference" ou "référence hypertexte" en français. 
+            
+              L'élément HTML a est composé d'une paire de balises (balise ouvrante et fermante) et d'un contenu entre les balises que l'on va appeler "ancre". Ce contenu peut être un texte, une image, etc. et sera la partie visible et cliquable du lien pour les utilisateurs.</p> 
+            
+              L'attribut href va nous servir à indiquer la cible du lien, c'est-à-dire l'endroit où l'utilisateur doit être envoyé après avoir cliqué sur le lien. Nous allons indiquer cette cible en valeur de l'attribut href.</p>
+            
+              Quelque soit le type de liens que l'on souhaite créer, seul le type de valeur indiqué pour l'attribut href va changer.</p> 
+            
+            &nbsp;
+             Création de liens en HTML 
+              Commençons par voir comment créer des liens externes en HTML.</p>
+            
+              Pour créer un lien vers une page d'un autre site en HTML, il va falloir indiquer l'adresse de la page (c'est-à-dire son URL) en valeur de l'attribut href de notre lien.</p>
+            
+            &nbsp;
+          <h2 id="extern"> Créer des liens vers d'autres pages d'un même site (liens internes) en HTML   </h2>
+              Le deuxième grand type de liens que l'on va pouvoir créer en HTML correspond aux liens internes, c'est-à-dire à des liens renvoyant vers d'autres pages d'un même site.</p>
+            
+              Nous allons avoir plusieurs solutions pour créer des liens internes. Tout d'abord, nous allons tout simplement pouvoir faire exactement comme pour les liens externes et indiquer l'adresse complète (adresse absolue) de la page cible du lien en valeur de l'attribut href.</p>
+            
+              Cependant, si cette première manière de faire semble tout à fait fonctionner et être la plus simple à priori, ce n'est pas du tout la plus optimisée d'un point de vue de l'utilisation des ressources et elle peut même s'avérer problématique selon comment votre site est construit (notamment si vos URLs sont construites dynamiquement).</p>
+            
+              Pour ces raisons, nous préciserons généralement plutôt une valeur de type relatif en valeur de l'attribut href> de nos liens internes en HTML.</p>
+            
+            &nbsp;
+            <h2 id="target"> Faire qu'un lien s'ouvre dans un nouvel onglet avec l'attribut target </h2>
+              Jusqu’à présent, lorsque nous cliquions sur les liens créés en HTML, nous étions immédiatement redirigés vers la nouvelle page et notre page cible s'ouvrait dans le même emplacement (le même cadre ou "frame") que le lien de départ.</p>
+            
+              Souvent, si vous avez un site, vous voudrez généralement que le lien s’ouvre dans un nouvel onglet afin que le visiteur ne perde pas la page de votre site. On va pouvoir faire cela avec l’attribut target.</p>
+            
+              L’attribut target va nous permettre de choisir où doit s’ouvrir notre page de destination. En pratique, nous utiliserons très souvent la valeur « _blank » qui spécifie que la nouvelle page doit s’ouvrir dans un nouvel onglet.</p>
+            
+            &nbsp;
+            <h2 id="target"> Créer des liens de renvoi vers une autre partie d'une même page   
+              Dans certains cas, lorsque vous construisez une page très longue, il va pouvoir être intéressant de proposer un sommaire avec des liens cliquables qui vont transporter l'utilisateur directement à un endroit précis de la page.</p>
+            
+              Nous allons également pouvoir créer ce type de liens (parfois appelé liens "ancre") avec notre élément HTML a ainsi qu'avec un attribut id qui va nous servir à identifier l'endroit de la page où l'utilisateur doit être renvoyé.</p>
+            
+              Voyons immédiatement comment créer ce type de lien en pratique. Pour cela, il va nous falloir une page très longue ou nous allons devoir réduire en CSS la largeur d'affichage du texte pour lui faire prendre plus de ligne et créer une barre de défilement (scrolling).</p> 
+            
+            
+            
+            Resources
+    </body>
+</html>
