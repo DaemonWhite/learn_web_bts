@@ -1,0 +1,28 @@
+table
+{
+    border: solid black medium;
+    width: 50%;
+    height: 100%;
+}
+.table2
+{
+    border-collapse: collapse;
+}
+.tableNbord
+{
+    border: solid cornflowerblue medium;
+}
+
+th
+{
+    border: solid #6495ed thin;
+}
+td
+{
+    border: solid #6495ed thin;
+}
+
+.fontTable
+{
+    background-color: aquamarine;
+}
