@@ -16,7 +16,7 @@
         <h1>Demande d'achat</h1>
         <h2> 
             <label for="anne">Budget Années : </label> 
-            <input type="text" pattern="[0-9]{4}" placeholder="2022"> 
+            <input id="anne" type="text" pattern="[0-9]{4}" placeholder="2022"> 
         </h2>
     </header>
     <fieldset>
@@ -36,7 +36,7 @@
             <label for="demandeur">Demandeur</label>
             <input type="text" name="demandeur" id="demandeur"><br>
             <label for="concerne">Section concerné</label>
-            <select name="demandeur" id="demandeur">
+            <select name="concerne" id="concerne">
                 <option value="bts">bts</option>
                 <option value="cap">cap</option>
                 <option value="general">general</option>
@@ -52,7 +52,7 @@
                     <legend>Matériel s'inscrit-il dans un Projet Global</legend>
                     <input type="checkbox" id="materielGlobal" name="materielGlobal">
                     <label for="materielGlobal">Matériel s'inscrit-il dans un Projet Global</label><br>
-                    <label for="materielGlobal">nom du projet</label>
+                    <label for="nomProjet">nom du projet</label>
                     <input type="text" id="nomProjet" name="nomProjet"><br>
                     <label for="budget">Estimation Global du Projet</label>
                     <input type="text" id="budget" name="budget"> €<br>
@@ -69,8 +69,8 @@
                     <legend>Nouvelle achat dans le cadre de</legend>
                     <input type="checkbox" name="nouvPrograme" value="nouvPrograme" id="nouvPrograme">
                     <label for="nouvPrograme">Mise en place de nouveau programmes</label>
-                    <input type="checkbox" name="techno" value="techno" id="techno">
-                    <label for="techno">Evolution technologie</label>
+                    <input type="checkbox" name="evoTechno" value="evoTechno" id="evoTechno">
+                    <label for="evoTechno">Evolution technologie</label>
                     <label for="cadreNouveau">Autre</label>
                     <input type="text" name="cadreNouveau" id="cadreNouveau">
                 </fieldset>
@@ -79,8 +79,8 @@
                 <input type="text" name="autreMaterielle"  id="autreMaterielle"><br>
                 <label for="Fourniseur">Fourniseur du materiel</label><br>
                 <textarea name="Fourniseur" id="Fourniseur" cols="60" rows="1"></textarea><br>
-                <label for="Fourniseur">Description du materiel</label><br>
-                <textarea name="Fourniseur" id="Fourniseur" cols="100" rows="15"></textarea>
+                <label for="DercFour">Description du materiel</label><br>
+                <textarea name="DercFour" id="DercFour" cols="100" rows="15"></textarea>
             </fieldset>
             <fieldset>
                 <legend>Argumentation Pedagogique</legend>
@@ -95,8 +95,8 @@
                 <textarea name="argumentation" id="argumentation" cols="100" rows="10">
                 </textarea>
                 <br>
-                <label for="consomable">Vu le coordonateur</label>
-                <input type="text" name="Coordonateur" id="Coordonateur">                
+                <label for="codona">Vu le coordonateur</label>
+                <input type="text" name="codona" id="codona">                
             </fieldset>
             <br>
             <label for="devisJoint">Devis Joint?</label>
