@@ -2,6 +2,11 @@
 {
     margin: 0px;
     padding: 0px;
+    background-color: #c8c8c8;
+}
+fieldset
+{
+    padding: 1%;
 }
 #entete
 {
@@ -13,7 +18,7 @@
 }
 .container
 {
-
+    padding: 2%;
     z-index: 1;
     top: 200px;
     position: relative;
@@ -21,4 +26,20 @@
 .formHead
 {
     text-align: center;
+}
+.Enseignement
+{
+    text-align: center;
+}
+.contInline
+{
+    width: 100%;
+    background-color: aqua;
+
+}
+.demi
+{
+    width: 47%;
+    display: inline-block;
+    
 }

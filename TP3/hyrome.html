@@ -24,7 +24,7 @@
                         <input id="anne" type="text" pattern="[0-9]{4}" placeholder="2022"> 
                     </h2>
             </header>
-            <fieldset>
+            <fieldset class="Enseignement">
                 <legend>Enseignement</legend>
                 <input type="checkbox" name="pro" value="pro" id="pro">
                 <label for="pro">Pro</label>
@@ -51,7 +51,18 @@
             
             <fieldset>
                 <legend>Type d'achat</legend>
-                <fieldset>
+                    
+            
+                <fieldset class="demi">
+                    <input type="checkbox" name="materiel" value="materiel" id="materiel">
+                    <label for="materiel">Renouvellement du matériel</label><br>
+                    <input type="checkbox" name="maintenance" value="maintenance" id="maintenance">
+                    <label for="maintenance">Maintenance - entretient</label><br>
+                    <input type="checkbox" name="conform" value="conform" id="conform">
+                    <label for="conform">Mise en conformité</label>
+                </fieldset>
+
+                <fieldset class="demi">
                     <legend>Matériel s'inscrit-il dans un Projet Global</legend>
                     <input type="checkbox" id="materielGlobal" name="materielGlobal">
                     <label for="materielGlobal">Matériel s'inscrit-il dans un Projet Global</label><br>
@@ -61,12 +72,6 @@
                     <input type="text" id="budget" name="budget"> €<br>
                 </fieldset>
                 <br>
-                <input type="checkbox" name="materiel" value="materiel" id="materiel">
-                <label for="materiel">Renouvellement du matériel</label><br>
-                <input type="checkbox" name="maintenance" value="maintenance" id="maintenance">
-                <label for="maintenance">Maintenance - entretient</label><br>
-                <input type="checkbox" name="conform" value="conform" id="conform">
-                <label for="conform">Mise en conformité</label><br>
                 <br>
                 <fieldset>
                     <legend>Nouvelle achat dans le cadre de</legend>
