@@ -1,0 +1,24 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+#entete
+{
+    padding: 1%;
+    width: 100%;
+    background-color: grey;
+    position: fixed;
+    z-index: 2;
+}
+.container
+{
+
+    z-index: 1;
+    top: 200px;
+    position: relative;
+}
+.formHead
+{
+    text-align: center;
+}

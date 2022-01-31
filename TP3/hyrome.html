@@ -1,0 +1,142 @@
+<!--by daemon white -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/hyrome.css">
+    <title>Hyrome demande d'achat</title>
+</head>
+<body>
+    <header id="entete">
+        <a href="https://www.education.gouv.fr/">
+            <img src="https://www.education.gouv.fr/sites/default/files/site_logo/2020-07/Logo-MENJ-TRICOLORE.png" alt="">
+        </a>
+        <a href="https://hyrome.paysdelaloire.e-lyco.fr/">
+            <img src="img/téléchargement.png" alt="lycée hyrome">
+        </a>
+    </header>
+    <fieldset class="container" >
+        <form method="post" name="inscriprion" action="destination.html">
+            <header class="formHead">
+                <h1>Demande d'achat</h1>
+                    <h2> 
+                        <label for="anne">Budget Années : </label> 
+                        <input id="anne" type="text" pattern="[0-9]{4}" placeholder="2022"> 
+                    </h2>
+            </header>
+            <fieldset>
+                <legend>Enseignement</legend>
+                <input type="checkbox" name="pro" value="pro" id="pro">
+                <label for="pro">Pro</label>
+                <input type="checkbox" name="techno" value="techno" id="techno">
+                <label for="techno">Techno</label>
+                <input type="checkbox" name="general" value="general" id="general">
+                <label for="general">general</label>
+            </fieldset>
+            <br>
+            <label for="date">Date de la demande</label>
+            <input id="date" type="date"><br>
+            <label for="demandeur">Demandeur</label>
+            <input type="text" name="demandeur" id="demandeur"><br>
+            <label for="concerne">Section concerné</label>
+            <select name="concerne" id="concerne">
+                <option value="bts">bts</option>
+                <option value="cap">cap</option>
+                <option value="general">general</option>
+                <option value="cap">cap</option>
+            </select><br>
+            <label for="nbEleve">Nombre d'eleve concerné</label>
+            <input type="text" id="nbEleve" pattern="[0-9]*"  placeholder="ex : 10">
+            <br>
+            
+            <fieldset>
+                <legend>Type d'achat</legend>
+                <fieldset>
+                    <legend>Matériel s'inscrit-il dans un Projet Global</legend>
+                    <input type="checkbox" id="materielGlobal" name="materielGlobal">
+                    <label for="materielGlobal">Matériel s'inscrit-il dans un Projet Global</label><br>
+                    <label for="nomProjet">nom du projet</label>
+                    <input type="text" id="nomProjet" name="nomProjet"><br>
+                    <label for="budget">Estimation Global du Projet</label>
+                    <input type="text" id="budget" name="budget"> €<br>
+                </fieldset>
+                <br>
+                <input type="checkbox" name="materiel" value="materiel" id="materiel">
+                <label for="materiel">Renouvellement du matériel</label><br>
+                <input type="checkbox" name="maintenance" value="maintenance" id="maintenance">
+                <label for="maintenance">Maintenance - entretient</label><br>
+                <input type="checkbox" name="conform" value="conform" id="conform">
+                <label for="conform">Mise en conformité</label><br>
+                <br>
+                <fieldset>
+                    <legend>Nouvelle achat dans le cadre de</legend>
+                    <input type="checkbox" name="nouvPrograme" value="nouvPrograme" id="nouvPrograme">
+                    <label for="nouvPrograme">Mise en place de nouveau programmes</label>
+                    <input type="checkbox" name="evoTechno" value="evoTechno" id="evoTechno">
+                    <label for="evoTechno">Evolution technologie</label>
+                    <label for="cadreNouveau">Autre</label>
+                    <input type="text" name="cadreNouveau" id="cadreNouveau">
+                </fieldset>
+                <br>
+                <label for="autreMaterielle">Autre</label>
+                <input type="text" name="autreMaterielle"  id="autreMaterielle"><br>
+                <label for="Fourniseur">Fourniseur du materiel</label><br>
+                <textarea name="Fourniseur" id="Fourniseur" cols="60" rows="1"></textarea><br>
+                <label for="DercFour">Description du materiel</label><br>
+                <textarea name="DercFour" id="DercFour" cols="100" rows="15"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Argumentation Pedagogique</legend>
+                <input type="checkbox" name="ccf" value="ccf" id="ccf">
+                <label for="ccf">Dans le cadre d'un CCF</label>
+                <input type="checkbox" name="projetExament" value="projetExament" id="projetExament">
+                <label for="projetExament">Dans le ca cadre d'un projet d'exament</label>
+                <input type="checkbox" name="autreProjet" value="autreProjet" id="autreProjet">
+                <label for="autreProjet">Dans le cadre d'un Autre Projet</label>
+                <input type="checkbox" name="consomable" value="consomable" id="consomable">
+                <label for="consomable">Dans le ca cadre d'un projet d'exament</label><br>
+                <textarea name="argumentation" id="argumentation" cols="100" rows="10">
+                </textarea>
+                <br>
+                <label for="codona">Vu le coordonateur</label>
+                <input type="text" name="codona" id="codona">                
+            </fieldset>
+            <br>
+            <label for="devisJoint">Devis Joint?</label>
+            <input type="checkbox" id="devisJoint"><br>
+            <label for="investisement">investisement</label>
+            <input type="text" name="investisement" id="investisement">
+            <fieldset>
+                <legend>Avis du Directeur Délégué au Formations</legend>
+                <label for="recuLe">reçu le</label>
+                <input type="date" id="recuLe"><br>
+                <textarea name="descRecu" id="descRecu" cols="100" rows="10"></textarea>
+                <br>
+                <label for="imputation">IMPUTATION : AP </label>
+                <input type="text" pattern="" name="imputation" id="imputation">
+            </fieldset>
+            <label for="prioriter">Prioriter : </label>
+            <select name="prioriter" id="prioriter">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <fieldset>
+                <legend>Décision du chef d'établisement</legend>
+                <br>
+                <input type="radio" name="favorable" id="favorable" value="favorable">
+                <label for="favorable">favorable</label>
+                <input type="radio" name="favorable" id="nFavorable" value="non-favorable">
+                <label for="nFavorable">non favorable</label><br>
+                <label for="directeur">Je sousigné le Directeur : </label>
+                <input type="text" id="directeur" name="directeur" >
+            </fieldset>
+
+            <input type="submit">
+            <input type="reset">
+
+        </form>
+    </fieldset>
+</body>
+</html>
