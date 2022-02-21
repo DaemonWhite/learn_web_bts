@@ -9,7 +9,7 @@
 <body>
     <header id="entete">
         <a href="https://www.education.gouv.fr/">
-            <img src="https://www.education.gouv.fr/sites/default/files/site_logo/2020-07/Logo-MENJ-TRICOLORE.png" alt="">
+            <img src="https://www.education.gouv.fr/sites/default/files/site_logo/2022-02/Logo-MENJ-TRICOLORE_0.png" alt="">
         </a>
         <a href="https://hyrome.paysdelaloire.e-lyco.fr/">
             <img src="img/téléchargement.png" alt="lycée hyrome">
@@ -100,11 +100,18 @@
                 <label for="autreProjet">Dans le cadre d'un Autre Projet</label>
                 <input type="checkbox" name="consomable" value="consomable" id="consomable">
                 <label for="consomable">Dans le ca cadre d'un projet d'exament</label><br>
-                <textarea name="argumentation" id="argumentation" cols="100" rows="10">
-                </textarea>
-                <br>
-                <label for="codona">Vu le coordonateur</label>
-                <input type="text" name="codona" id="codona">                
+                <div class="relativeCor">
+                   
+                    <textarea name="argumentation" id="argumentation" cols="100" rows="10"></textarea>
+                    <br>
+                   <div class="absolueCor">
+                        <label for="codona">Vu le coordonateur</label>
+                        <br>
+                        <input type="text" name="codona" id="codona"> 
+                   </div>
+                </div>
+                
+                               
             </fieldset>
             <br>
             <label for="devisJoint">Devis Joint?</label>
@@ -132,7 +139,7 @@
                 <br>
                 <input type="radio" name="favorable" id="favorable" value="favorable">
                 <label for="favorable">favorable</label>
-                <input type="radio" name="favorable" id="nFavorable" value="non-favorable">
+                <input type="radio" name="favorable" id="nFavorable" value="non-favorable" checked>
                 <label for="nFavorable">non favorable</label><br>
                 <label for="directeur">Je sousigné le Directeur : </label>
                 <input type="text" id="directeur" name="directeur" >

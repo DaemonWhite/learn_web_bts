@@ -41,5 +41,15 @@ fieldset
 {
     width: 47%;
     display: inline-block;
-    
+
+}
+.relativeCor
+{
+    position: relative;
+}
+.absolueCor
+{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }
