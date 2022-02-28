@@ -1,4 +1,11 @@
+@font-face {
+    font-family: "arcade";
+    src: url("/font/PressStart2P-Regular.ttf") format("truetype");
+   }
+   
+
 *{
+    font-family: arcade;
     padding: 0px;
     margin: 0px;
 }
@@ -6,14 +13,12 @@ header
 {
     position: relative;
 }
-
-
-
 nav
 {
     position: absolute;
+    display: flex;
     bottom: 0px;
-    left: 0px;
+    flex-direction: row;
     background-color: #3e3a3b;
     width: 100%;
     color: rgb(9, 219, 9);
@@ -21,7 +26,6 @@ nav
 /* Button system */
 a
 {
-    display: inline-block;
     color: rgb(9, 219, 9);
 }
 a:hover
@@ -30,7 +34,7 @@ a:hover
 }
 .button
 {
-    width: 100%;
+    padding: 5px;
     background-color: #525252;
     border: solid black 2px;
 }
@@ -38,14 +42,18 @@ a:hover
 {
     background-color: #242424;
 }
+.logoHyrome
+{
+    position: absolute;
+    width: 80%;
+    background-color: rgba(32%, 32%, 32%, 50%);
+}
 .bannerImg
 {
     width: 100%;
 }
-.bannerTitle
+
+.container
 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: purple;
+    display: flex;
 }
