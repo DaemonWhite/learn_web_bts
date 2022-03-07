@@ -6,8 +6,14 @@
 
 *{
     font-family: arcade;
+    color: rgb(9, 219, 9);;
     padding: 0px;
     margin: 0px;
+}
+body
+{
+    background-color: black;
+    back
 }
 header
 {
@@ -27,11 +33,17 @@ nav
 a
 {
     color: rgb(9, 219, 9);
+    text-decoration: none;
 }
 a:hover
 {
     color: rgb(8, 153, 8);
 }
+ul
+{
+    padding-left: 20%;
+}
+
 .button
 {
     padding: 5px;
@@ -56,4 +68,32 @@ a:hover
 .container
 {
     display: flex;
+    flex-wrap: wrap;
 }
+h3,h2
+{
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.about
+{
+    font-size: 0.7em;
+    padding: 5px;
+    flex: 20%;
+    height: 100%;
+    border: #242424 solid;
+}
+.main_info
+{
+    padding: 20px;
+    height: 100%;
+    flex: 70%;
+}
+footer
+{
+    padding: 20px;
+   
+    background: #525252;
+}
+
