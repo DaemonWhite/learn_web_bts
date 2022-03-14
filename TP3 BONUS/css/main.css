@@ -13,20 +13,16 @@
 body
 {
     background-color: black;
-    back
 }
-header
-{
-    position: relative;
-}
+
+
 nav
 {
-    position: absolute;
     display: flex;
     bottom: 0px;
     flex-direction: row;
     background-color: #3e3a3b;
-    width: 100%;
+    text-orientation: right;
     color: rgb(9, 219, 9);
 }
 /* Button system */
@@ -69,10 +65,17 @@ ul
 {
     display: flex;
     flex-wrap: wrap;
+    overflow-x: scroll;
+    white-space: wrap;
 }
-h3,h2
+h2
 {
     font-size: 1.5em;
+    margin-bottom: 5px;
+}
+h3
+{
+    font-size: 1.2em;
     margin-bottom: 5px;
 }
 
@@ -82,7 +85,7 @@ h3,h2
     padding: 5px;
     flex: 20%;
     height: 100%;
-    border: #242424 solid;
+    border-left: #242424 solid;
 }
 .main_info
 {
@@ -97,3 +100,12 @@ footer
     background: #525252;
 }
 
+@media screen and (max-width: 700px) {
+    nav {   
+      flex-direction: column;
+      text-orientation: center;
+    }
+    body{
+        font-size: smaller;
+    }
+}

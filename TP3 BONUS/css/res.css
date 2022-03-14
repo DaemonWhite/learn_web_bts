@@ -1,0 +1,23 @@
+.reseauSchema
+{
+    margin-top: 4px;
+    width: 50%;
+    height: auto;
+}
+
+.containBaie
+{
+    display: flex;
+}
+.containBaie > p
+{
+    flex: 70%;
+}
+
+@media screen and (max-width: 700px) 
+{
+    .reseauSchema 
+    {
+        width: 100%;
+    }
+}
