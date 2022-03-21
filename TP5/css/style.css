@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "baloo";
+    src: url("/font/BalooDa2-VariableFont_wght.ttf") format("truetype");
+   }
+
+:root {
+    --main-background: #ffd8a8;
+    --main-border: #ffa94d;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: baloo;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+body > header, main, nav, footer {
+    background-color: var(--main-background);
+    border-radius: 10px;
+    border: solid var(--main-border) 2px;
+}
+
+body > header {
+    grid-column: 1 / 8;
+}
+body > main {
+    grid-column: 2/8;
+    grid-row: 2/7;
+}
+body > nav {
+    grid-column: 1;
+    grid-row: 2 / 7;
+}
+body > footer {
+    grid-column: 1 / 8;
+    grid-row: 7;
+}
+
+/* --- NAV ---*/
+body > nav > div {
+    border: solid var(--main-border) 2px;
+    display: grid;
+}
