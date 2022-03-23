@@ -65,7 +65,7 @@ ul
 {
     display: flex;
     flex-wrap: wrap;
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: wrap;
 }
 h2
