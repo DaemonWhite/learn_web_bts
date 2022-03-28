@@ -7,24 +7,64 @@
 </head>
 <body>
     <header>
-       
+       <div>
+           <img src="img/echecs/plateauEchecs1.jpeg" alt="">
+       </div>
+       <div>
+           <h1>Gestion d'un championnat d'échecs</h1>
+           <h2>Créer un champinat</h2>
+       </div>
+       <div>
+        <img src="img/echecs/plateauEchecs2.jpeg" alt="">
+       </div>
     </header>
 
     <nav>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
+        <div>
+            <img src="img/icons/champion.svg" alt="" class="pageActive">
+            <span>Créer un champion</span>
+        </div>
+        <div>
+            <img src="img/icons/player.svg" alt="">
+            <span>Inscrire un joueur</span>
+        </div>
+        <div>
+            <img src="img/icons/listePlayer.svg" alt="">
+            <span>Consulter la liste des joueurs inscrits</span>
+        </div>
+        <div>
+            <img src="img/icons/genGames.svg" alt="">
+            <span>Générer les parties</span>
+        </div>
+        <div>
+            <img src="img/icons/classGames.svg" alt="">
+            <span>Cobsulter les partie d'un joueur</span>
+        </div>
+        <div>
+            <img src="img/icons/class.svg" alt="">
+            <span>Consulter le classement</span>
+        </div>
     </nav>
 
     <main>
-        ee
+        <form action="">
+            <label for="nameChampinship">Nom du Champinat : </label>
+            <input type="text" id="nameChampinship" name="nameChampinship" placeholder="Nom du champinat">
+            <label for="numClient">Nombre de participant : </label>
+            <input type="text" id="numClient" name="numClient" placeholder="Nombre pair de participant">
+            <label for="dateStart">Date de debut : </label>
+            <input type="date" id="dateStart" name="dateStart">
+            <label for="dateEnd">Date de fin : </label>
+            <input type="date" id="dateEnd" name="dateEnd">
+            <input type="submit">
+            <input type="reset">
+            
+        </form>
     </main>
 
     <footer>
-        ee
+        <h2>BTS SN IR - Lycée de l'Hyrôme</h2>
+        <address>71 rue Nationale - 49120 </address>
     </footer>
 </body>
 </html>
