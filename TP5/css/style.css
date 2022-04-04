@@ -8,6 +8,7 @@
     --main-background-color: #fea94c;
     --main-background-hover: #ffc176;
     --main-border: #ffa94d;
+    --main-gold: #dea52f;
 }
 
 *{
@@ -61,7 +62,7 @@ body > header > div > img{
     width: max-content;
 }
 body > header > div > h2{
-    color: #dea52f;
+    color: var(--main-gold);
 }
 
 /* --- NAV ---*/
@@ -98,60 +99,4 @@ body > nav > a > img {
 body > nav > a > span {
     font-size: 100%;
     font-weight: bold;
-}
-/* --- MAIN ---*/
-main {
-    padding: 10px;
-}
-form {
-    height: 100%;
-    display: grid;
-    row-gap: 13%;
-    grid-template-columns: 1fr 2fr 2fr;
-    overflow: auto;
-}
-input {
-    padding: 5px;
-    background-color: var(--main-background-color);
-    border: solid var(--main-border);
-    border-radius: 5px;
-    grid-column: 2/4;
-    width:98%;
-}
-input:hover{
-    background-color: rgb(212, 142, 67);
-}
-input[type=text] {
-    color: white; 
-}
-input[type=date] {
-    width: 50%;
-    font-weight: bold;
-}
-input[type=submit] {
-    width: 75%;
-    grid-column: 2;
-    font-weight: bold;
-}
-input[type=reset] { 
-    width: 75%;
-    margin-left: 25%;
-    grid-column: 3;
-    font-weight: bold;
-}
-form > label {
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-form > fieldset
-{
-    padding: 5px;
-    grid-column: 2/4;
-    border: solid 2px black;
-}
-form > fieldset > legend
-{
-    color: black;
 }

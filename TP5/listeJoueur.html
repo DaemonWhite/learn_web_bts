@@ -6,7 +6,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/tabl.css">
+    
+
 </head>
 <body>
     <header>
@@ -15,7 +17,7 @@
        </div>
        <div>
            <h1>Gestion d'un championnat d'échecs</h1>
-           <h2>Créer un champinat</h2>
+           <h2>Liste joueur</h2>
        </div>
        <div>
         <img src="img/echecs/plateauEchecs2.jpeg" alt="">
@@ -24,7 +26,7 @@
 
     <nav>
         <a href="creerChampionat.html">
-            <span class="material-icons icon pageActive">emoji_events</span>
+            <span class="material-icons icon">emoji_events</span>
             <span>Créer un champion</span>
         </a>
         <a href="inscrireJoueur.html" >
@@ -32,7 +34,7 @@
             <span>Inscrire un joueur</span>
         </a>
         <a href="listeJoueur.html">
-            <span class="material-icons icon">receipt_long</span>
+            <span class="material-icons icon pageActive">receipt_long</span>
             <span>Consulter la liste des joueurs inscrits</span>
         </a>
         <a href="genererParties.html">
@@ -50,19 +52,21 @@
     </nav>
 
     <main>
-        <form action="">
-            <label for="nameChampinship">Nom du Champinat : </label>
-            <input type="text" id="nameChampinship" name="nameChampinship" placeholder="Nom du champinat">
-            <label for="numClient">Nombre de participant : </label>
-            <input type="text" id="numClient" name="numClient" placeholder="Nombre pair de participant">
-            <label for="dateStart">Date de debut : </label>
-            <input type="date" id="dateStart" name="dateStart">
-            <label for="dateEnd">Date de fin : </label>
-            <input type="date" id="dateEnd" name="dateEnd">
-            <input type="submit" value="Valider">
-            <input type="reset" value="Reinitialiser">
-            
-        </form>
+        <h1>Liste des joueurs Inscrit</h1>
+        <table>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Sexe</th>
+            </tr>
+            <tr>
+                <td>Maxime</td>
+                <td>Vachier-Lagrave</td>
+                <td>30</td>
+                <td>H</td>
+            </tr>
+        </table>
     </main>
 
     <footer>
