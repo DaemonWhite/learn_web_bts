@@ -47,6 +47,7 @@ body > nav {
 body > footer {
     grid-column: 1 / 3;
     grid-row: 3;
+    padding: 10px;
 }
 /* --- HEADER ---*/
 body > header{
@@ -69,13 +70,14 @@ body >  nav {
     grid: auto-flow / 2fr;
     padding: 10px;
 }
-body > nav > div {
+body > nav > a {
+    text-decoration: none;
     border-radius: 10px;
     border: solid var(--main-border) 2px;
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
-body > nav > div:hover {
+body > nav > a:hover {
    background-color: var(--main-background-hover);
 }
 
@@ -83,12 +85,18 @@ body > nav > div:hover {
     background-color: var(--main-background-color);
 }
 
-body > nav > div > img {
+.icon{
+    font-size: 500%;
+    color: black;
+    
+}
+
+body > nav > a > img {
     height: 100%;
     width: 100%;
 }
-body > nav > div > span {
-    font-size: 1.2em;
+body > nav > a > span {
+    font-size: 100%;
     font-weight: bold;
 }
 /* --- MAIN ---*/
@@ -96,34 +104,36 @@ main {
     padding: 10px;
 }
 form {
+    height: 100%;
     display: grid;
     row-gap: 13%;
     grid-template-columns: 1fr 2fr 2fr;
+    overflow: auto;
 }
-form > input {
+input {
     padding: 5px;
     background-color: var(--main-background-color);
     border: solid var(--main-border);
     border-radius: 5px;
     grid-column: 2/4;
-    width:100%;
+    width:98%;
 }
-form > input:hover{
+input:hover{
     background-color: rgb(212, 142, 67);
 }
-form > input[type=text] {
+input[type=text] {
     color: white; 
 }
-form > input[type=date] {
+input[type=date] {
     width: 50%;
     font-weight: bold;
 }
-form > input[type=submit] {
+input[type=submit] {
     width: 75%;
     grid-column: 2;
     font-weight: bold;
 }
-form > input[type=reset] { 
+input[type=reset] { 
     width: 75%;
     margin-left: 25%;
     grid-column: 3;
@@ -133,4 +143,15 @@ form > label {
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
+}
+
+form > fieldset
+{
+    padding: 5px;
+    grid-column: 2/4;
+    border: solid 2px black;
+}
+form > fieldset > legend
+{
+    color: black;
 }

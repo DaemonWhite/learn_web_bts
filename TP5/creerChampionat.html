@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,30 +22,30 @@
     </header>
 
     <nav>
-        <div>
-            <img src="img/icons/champion.svg" alt="" class="pageActive">
+        <a href="creerChampionat.html">
+            <span class="material-icons icon pageActive">emoji_events</span>
             <span>Créer un champion</span>
-        </div>
-        <div>
-            <img src="img/icons/player.svg" alt="">
+        </a>
+        <a href="inscrireJoueur.html" >
+            <span class="material-icons icon">person</span>
             <span>Inscrire un joueur</span>
-        </div>
-        <div>
-            <img src="img/icons/listePlayer.svg" alt="">
+        </a>
+        <a href="listeJoueur.html">
+            <span class="material-icons icon">receipt_long</span>
             <span>Consulter la liste des joueurs inscrits</span>
-        </div>
-        <div>
-            <img src="img/icons/genGames.svg" alt="">
+        </a>
+        <a href="genererParties.html">
+            <span class="material-icons icon">sports_esports</span>
             <span>Générer les parties</span>
-        </div>
-        <div>
-            <img src="img/icons/classGames.svg" alt="">
+        </a>
+        <a href="consulterPartie.html">
+            <span class="material-icons icon">folder</span>
             <span>Cobsulter les partie d'un joueur</span>
-        </div>
-        <div>
-            <img src="img/icons/class.svg" alt="">
+        </a>
+        <a href="consulterClassement.html" >
+            <span class="material-icons icon">trending_up</span>
             <span>Consulter le classement</span>
-        </div>
+        </a>
     </nav>
 
     <main>
@@ -56,8 +58,8 @@
             <input type="date" id="dateStart" name="dateStart">
             <label for="dateEnd">Date de fin : </label>
             <input type="date" id="dateEnd" name="dateEnd">
-            <input type="submit">
-            <input type="reset">
+            <input type="submit" value="Valider">
+            <input type="reset" value="Reinitialiser">
             
         </form>
     </main>

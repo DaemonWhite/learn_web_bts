@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+    <header>
+       <div>
+           <img src="img/echecs/plateauEchecs1.jpeg" alt="">
+       </div>
+       <div>
+           <h1>Gestion d'un championnat d'échecs</h1>
+           <h2>Créer un champinat</h2>
+       </div>
+       <div>
+        <img src="img/echecs/plateauEchecs2.jpeg" alt="">
+       </div>
+    </header>
+
+    <nav>
+        <a href="creerChampionat.html">
+            <span class="material-icons icon">emoji_events</span>
+            <span>Créer un champion</span>
+        </a>
+        <a href="inscrireJoueur.html" >
+            <span class="material-icons icon pageActive">person</span>
+            <span>Inscrire un joueur</span>
+        </a>
+        <a href="listeJoueur.html">
+            <span class="material-icons icon">receipt_long</span>
+            <span>Consulter la liste des joueurs inscrits</span>
+        </a>
+        <a href="genererParties.html">
+            <span class="material-icons icon">sports_esports</span>
+            <span>Générer les parties</span>
+        </a>
+        <a href="consulterPartie.html">
+            <span class="material-icons icon">folder</span>
+            <span>Cobsulter les partie d'un joueur</span>
+        </a>
+        <a href="consulterClassement.html" >
+            <span class="material-icons icon">trending_up</span>
+            <span>Consulter le classement</span>
+        </a>
+    </nav>
+
+    <main>
+        <form action="">
+            <label for="namePlayer">Nom du participant : </label>
+            <input type="text" id="namePlayer" name="namePlayer" placeholder="Nom du participant">
+            <label for="firstPlayer">Prénom du participant : </label>
+            <input type="text" id="firstPlayer" name="firstPlayer" placeholder="Prénom du participant">
+            <label for="firstPlayer">Age : </label>
+            <input type="text" id="age" name="age" placeholder="Age">
+            <fieldset>
+                <legend>Address</legend>
+                <label for="rue">Rue : </label>
+                <input type="text" placeholder="Rue" name="rue" id="rue">
+                <label for="postal">Postal : </label>
+                <input type="text" placeholder="Code Postal" name="postal" id="postal">
+                <label for="ville">ville : </label>
+                <input type="text" placeholder="Ville" name="ville" id="ville">
+
+            </fieldset>
+            <input type="submit" value="Valider">
+            <input type="reset" value="Reinitialiser">
+            
+        </form>
+    </main>
+
+    <footer>
+        <h2>BTS SN IR - Lycée de l'Hyrôme</h2>
+        <address>71 rue Nationale - 49120 </address>
+    </footer>
+</body>
+</html>
