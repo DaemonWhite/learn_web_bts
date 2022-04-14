@@ -1,3 +1,8 @@
+:root {
+    --tabl-background-one: #fedab8;
+    --tabl-background-two: #d3d3d3;
+    --tabl-border: #ffffff;
+}
 main > h1{
     text-align: center;
 }
@@ -5,29 +10,31 @@ main > h1{
     color: var(--main-gold);
     font-weight: bold;
 }
+
 table{
     margin-left: auto;
     margin-right: auto;
     border: 1px solid;
     text-align: center;
-    border: solid white 2px;
+    border: solid var(--tabl-border) 2px;
     width: 95%;
     height: 70%;
-    background-color: #fedab8;
+    background-color: var(--tabl-background-one);
 }
 th{
-    background-color: #fedab8;
+    background-color: var(--tabl-background-one);
 }
 
 th, tr, td{
-    border: 1px solid white;
+    border: 1px solid var(--tabl-border);
     height: 10px;
+    color: inherit;
 }
-tr{
-    background-color: #d3d3d3;
+tr:nth-child(odd) {
+    background-color: var(--tabl-background-two);  
 }
-tr:nth-child(even) {
-    background-color: #fedab8;  
+.end-table > td {
+    background-color: var(--tabl-background-one);
 }
 .no-table{
     border: none;
