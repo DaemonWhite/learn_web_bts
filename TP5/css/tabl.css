@@ -18,7 +18,6 @@ table{
     text-align: center;
     border: solid var(--tabl-border) 2px;
     width: 95%;
-    height: 70%;
     background-color: var(--tabl-background-one);
 }
 th{
