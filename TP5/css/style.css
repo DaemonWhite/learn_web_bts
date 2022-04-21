@@ -55,15 +55,66 @@ body > header{
 }
 
 body > header > div > img{
-    width: max-content;
+    height: 95%;
+}
+img:hover {
+    animation-duration: 1s;
+    animation-name: reduce;
+}
+.imgRotate:hover {
+    animation-duration: 1s;
+    animation-name: rotate;
 }
 
+@keyframes reduce {
+    from {
+        height: 95%;
+    }
+  
+    to {
+      height: 65%;
+    }
+  }
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-15deg);
+    }
+}
 h1,h2{
     text-align: left;
 }
+.title_translate:hover {
+    animation-duration: 2s;
+    animation-name: title_translate;
+}
+@keyframes title_translate {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(60px, 0px);
+    }
+}
+
 body > header > div > h2 {
     color: var(--main-gold);
     font-style: italic;
+}
+body > header > div > h2:hover {
+    animation-duration: 2s;
+    animation-name: sub_title_reduce;
+}
+
+@keyframes sub_title_reduce {
+    from {
+        font-size: 1.5em;
+    }
+    to {
+        font-size: 2em;
+    }
 }
 
 /* --- NAV ---*/
