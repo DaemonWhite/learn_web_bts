@@ -86,7 +86,7 @@ img:hover {
 h1,h2{
     text-align: left;
 }
-.title_translate:hover {
+body > header > div > h1:hover {
     animation-duration: 2s;
     animation-name: title_translate;
 }
