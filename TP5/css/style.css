@@ -143,12 +143,45 @@ body > nav > a:hover {
     color: black;
     
 }
-
-body > nav > a > img {
-    height: 100%;
-    width: 100%;
-}
 body > nav > a > span {
     font-size: 100%;
     font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr 3fr 1fr;
+    }
+    body > header{
+        grid-column: 1;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        text-align: center;
+    }
+    body > main {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    body > nav {
+        grid-row: 2;
+    }
+    body > footer {
+        grid-column: 1;
+        grid-row: 4;
+        padding: 10px;
+    }
+    body > nav {
+        grid: 2fr / auto-flow;
+    }
+    body > nav > a {
+        grid-template-columns: 1fr;
+    }
+    body > nav > a > span{
+        text-align: center;
+    }
+    body > nav > a > span + span {
+        display: none;
+    }
 }
