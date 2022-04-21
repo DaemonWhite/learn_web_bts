@@ -29,3 +29,12 @@ input {
 input::placeholder {
 	color: var(--main-background-color);
 }
+
+@media screen and (max-width: 900px) {
+	body > form {
+		grid-column: 1;
+		grid-row: 2/4;
+	}
+}
+	
+}
