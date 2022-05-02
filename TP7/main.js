@@ -4,7 +4,7 @@ let SecArray=[0,10,15,2];
 //ex 1
 function racine(x) {
     let result = Math.sqrt(x);
-    document.write("Racine :"+result+"<br>");
+    document.write("Racine : "+result+"<br>");
 }
 //ex 2
 function power(x,n)
