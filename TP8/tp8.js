@@ -51,21 +51,39 @@ function conjugueur() {
 
 function triBulle()
 {
-    a=[3,2,1,4,5,6,7,8,9,10];
+    let nbTri=0;
+    let tabTri=[];
+
+    let sortieATrier = document.getElementById("a_trier");
+    let sortieTrie = document.getElementById("resultat_tri");
+
+    while (true) {
+        nbTri = parseInt(prompt("Entrez le nombre de valeurs à trier"));
+        if (nbTri != 0) {
+            break;
+        } else {
+            alert("Veuillez entrer un nombre");
+        }
+    }
+    for (let i = 0; i < nbTri; i++) {
+        tabTri.push(parseInt(prompt("Entrez une valeur : ")));
+    }
+
+    sortieATrier.innerHTML = tabTri;
+
     let permutaion=false;
     do {
-        for (let i = 0; i < a.length-2; i++) {
-            if (a[i] > a[i+1]) {
-                let tmp = a[i];
-                a[i] = a[i+1];
-                a[i+1] = tmp;
+        permutaion = false;
+        for (let i = 0; i < tabTri.length-1; i++) {
+            if (tabTri[i] > tabTri[i+1]) {
+                let tmp = tabTri[i];
+                tabTri[i] = tabTri[i+1];
+                tabTri[i+1] = tmp;
                 permutaion = true;
+                break;
             }
         }
-        console.log(permutaion);
     } while (permutaion==true);
 
-    console.log(a);
-    
+    sortieTrie.innerHTML = tabTri;    
 }
-triBulle();
