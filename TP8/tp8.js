@@ -49,7 +49,9 @@ function conjugueur() {
     }
 }
 
-function triBulle()
+
+//Sort a table in ascending order.
+function CressentTriBulle()
 {
     let nbTri=0;
     let tabTri=[];
