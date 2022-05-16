@@ -49,9 +49,7 @@ function conjugueur() {
     }
 }
 
-
-//Sort a table in ascending order.
-function CressentTriBulle()
+function triBulle()
 {
     let nbTri=0;
     let tabTri=[];
@@ -73,19 +71,89 @@ function CressentTriBulle()
 
     sortieATrier.innerHTML = tabTri;
 
+    let passage =0;
+
     let permutaion=false;
     do {
         permutaion = false;
-        for (let i = 0; i < tabTri.length-1; i++) {
+        for (let i = 0; i < tabTri.length - 1 - passage; i++) {
             if (tabTri[i] > tabTri[i+1]) {
+                passage--;
                 let tmp = tabTri[i];
                 tabTri[i] = tabTri[i+1];
                 tabTri[i+1] = tmp;
                 permutaion = true;
-                break;
             }
         }
     } while (permutaion==true);
 
     sortieTrie.innerHTML = tabTri;    
+}
+
+function detectFirstLetter() {
+    let recupTexte = document.getElementById("text_detect_letter").value;
+    let resultFirstLetter = document.getElementById("result_first_letter");
+
+    switch (recupTexte[0].toLowerCase()) {
+        case 'a':
+        case 'b':
+        case 'c':
+        case 'd':
+            resultFirstLetter.innerHTML = recupTexte + " chaine valide ce trouvant entre a et d"
+            break;
+    
+        default:
+            resultFirstLetter.innerHTML = recupTexte + " chaine ne ce trouvant entre a et d"
+            break;
+    }
+}
+
+function verifArobase(texte) {
+    let ret=false;
+
+    arobasePositions = texte.indexOf("@");
+
+    console.log(arobasePositions);
+
+    if (arobasePositions != -1) {
+        ret = true;
+    } 
+    
+    if (texte.indexOf("@", arobasePositions) != -1) {
+        ret = false;
+    }
+
+    return ret;
+}
+
+function testeArobase() {
+    let resultatArobase = document.getElementById("resultat_arobase");
+    let recupTexte = document.getElementById("text_detect_letter").value;
+
+    if ( verifArobase(recupTexte) ) {
+        resultatArobase.innerHTML = "L'arobase est présente";
+    } else {
+        resultatArobase.innerHTML = "chaine invalide";
+    }
+        
+}
+
+function nombreDetect() {
+    let recupTexte = document.getElementById("text_detect_letter").value;
+    let resultNombre = document.getElementById("result_nombre");
+
+    if (recupTexte.match(/[0-9]/g)) {
+        resultNombre.innerHTML = "Le texte contient un nombre";
+    } else {
+        resultNombre.innerHTML = "Le texte ne contient pas de nombre";
+    }
+    
+}
+
+function replaceNumberByAsterix() {
+    let recupTexte = document.getElementById("text_detect_letter").value;
+    let resultReplace = document.getElementById("result_replace");
+
+    resultReplace.innerHTML = recupTexte.replace(/[0-9]/g, "*");
+    
 }

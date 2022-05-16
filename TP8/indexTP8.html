@@ -6,7 +6,7 @@
 </head>
 <body>
     <div>
-        <h1>Compteur de voyelle</h1>
+        <h1>EX 1 Compteur de voyelle</h1>
         <input type="text" id="comptageVoyelle" name="comptageVoyelle" >
         <input type="button" onclick="comptageVoyelles()" value="Envoyer">
         <div>
@@ -15,7 +15,7 @@
         </div>
     </div>
     <div>
-        <h1>Conjugueur</h1>
+        <h1>EX 2 Conjugueur</h1>
         <input type="text" id="conjugueur" name="conjugueur" >
         <input type="button" onclick="conjugueur()" value="Envoyer">
         <div>
@@ -24,13 +24,33 @@
         </div>
     </div>
     <div>
-        <h1>Trieur</h1>
-        <input type="button" value="Trier" onclick="CressentTriBulle()">
+        <h1>EX 3 Trieur</h1>
+        <input type="button" value="Trier" onclick="triBulle()">
         <div>
             <div>
                 A trier : <span id="a_trier" ></span>
                 <br>
                 Trier : <span id="resultat_tri" ></span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1>EX 4 texte modif</h1>
+        <input type="text" id="text_detect_letter" name="text_detect_letter" placeholder="Texte" >
+        <input type="button" value="Première lettre a -d" onclick="detectFirstLetter()">
+        <input type="button" value="Detect @ (max 1)" onclick="testeArobase()">
+        <input type="button" value="Detect nombre" onclick="nombreDetect()">
+        <input type="button" value="censure nombre" onclick="replaceNumberByAsterix()">
+        
+        <div>
+            <div>
+                Sortie: <span id="result_first_letter" ></span>
+                <br>
+                Arobase : <span id="resultat_arobase" ></span>
+                <br>
+                Nombre : <span id="result_nombre" ></span>
+                <br>
+                Censure nombre : <span id="result_replace" ></span>
             </div>
         </div>
     </div>
