@@ -1,0 +1,7 @@
+input:invalid {
+    border: red solid 3px;
+}
+
+canvas {
+    border: 5px solid black
+}

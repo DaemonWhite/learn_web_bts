@@ -32,7 +32,6 @@ function conjugueur() {
 
     let verbe = document.getElementById("conjugueur").value;
     let resultatConjugueur = document.getElementById("resultat_conjugueur");
-    let convStringArray=[], verifEr =[];
 
     if (verbe.substring(verbe.length-2) != "er") {
         resultatConjugueur.innerHTML = "Veuillez entrer un verbe en terminant par er";
@@ -117,11 +116,12 @@ function verifArobase(texte) {
 
     if (arobasePositions != -1) {
         ret = true;
-    } 
+    }
     
-    if (texte.indexOf("@", arobasePositions) != -1) {
+    if (texte.indexOf("@", arobasePositions+1) != -1) {
         ret = false;
     }
+   
 
     return ret;
 }
@@ -131,7 +131,7 @@ function testeArobase() {
     let recupTexte = document.getElementById("text_detect_letter").value;
 
     if ( verifArobase(recupTexte) ) {
-        resultatArobase.innerHTML = "L'arobase est présente";
+        resultatArobase.innerHTML = "L'arobase est présent";
     } else {
         resultatArobase.innerHTML = "chaine invalide";
     }
