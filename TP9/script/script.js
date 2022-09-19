@@ -100,6 +100,7 @@ function circleCanvas(cible, x1, y1 ,size, reduce,) {
         ctx.fillStyle = 'lightgrey';
         ctx.arc(x1, y1, lessSize, 0, 2 * Math.PI);
         ctx.fill();
+        
         ctx.closePath();
 
         
@@ -119,4 +120,86 @@ function lineCanvas(cible, x1, y1, x2, y2, size) {
         ctx.closePath();
     }
 }
-  
+
+function center(x2) {
+    let ret = (x2/4);
+    return ret;
+}
+
+function rectangle(id, texte, x1, x2, y1, y2, r, b, g) {
+    let canvas = document.getElementById(id);
+    if (canvas.getContext) {
+        function roundRect(x, y, w, h, radius)
+{   
+        var canvas = document.getElementById("canvas6");
+        var context = canvas.getContext("2d");
+        var r = x + w;
+        var b = y + h;
+        context.beginPath();
+        context.strokeStyle="green";
+        context.lineWidth="4";
+        context.moveTo(x+radius, y);
+        context.lineTo(r-radius, y);
+        context.quadraticCurveTo(r, y, r, y+radius);
+        context.lineTo(r, y+h-radius);
+        context.quadraticCurveTo(r, b, r-radius, b);
+        context.lineTo(x+radius, b);
+        context.quadraticCurveTo(x, b, x, b-radius);
+        context.lineTo(x, y+radius);
+        context.quadraticCurveTo(x, y, x+radius, y);
+        context.stroke();
+}
+
+    }
+}
+
+function roundRect(x, y, w, h, radius)
+{
+    console.log(x, y)
+    var canvas = document.getElementById("rectangle");
+    var context = canvas.getContext("2d");
+    var r = x + w;
+    var b = y + h;
+    context.beginPath();
+    context.strokeStyle="green";
+    context.fillStyle="green";
+    context.lineWidth="4";
+    context.moveTo(x+radius, y);
+    context.lineTo(r-radius, y);
+    context.quadraticCurveTo(r, y, r, y+radius);
+    context.lineTo(r, y+h-radius);
+    context.quadraticCurveTo(r, b, r-radius, b);
+    context.lineTo(x+radius, b);
+    context.quadraticCurveTo(x, b, x, b-radius);
+    context.lineTo(x, y+radius);
+    context.quadraticCurveTo(x, y, x+radius, y);
+    context.stroke();
+    context.fill();
+}
+
+function rectLine(target, rect) {
+
+    let rectNumberByID = [];
+
+    rect.forEach(element => {
+        console.log(rectNumberByID.length, element[0])
+
+        if (rectNumberByID.length < element[0]) {
+            console.log('d')
+        } else {
+            rectNumberByID
+        }
+
+        rectangle(target,
+            element[3],
+            element[1][0],
+            element[1][1],
+            element[1][2],
+            element[1][3],
+            element[2][0],
+            element[2][1],
+            element[2][2],
+            )
+    });
+
+}
