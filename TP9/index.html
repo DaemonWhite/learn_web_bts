@@ -8,10 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="bina" placeholder="Binaire" pattern="[0-1]*" onkeypress="binaireModif(this)"><br>
-    <input type="text" id="hexa" placeholder="Hexa" pattern="[0]{1}[x]{1}[0-9|A-f|a-f]*" onkeypress="hexaModif(this)" value="0x"> <br>
-    <input type="text" id="deci" placeholder="Decimal" pattern="[0-9]*" onkeypress="decimalModif(this)"><br>
+    <input type="text" id="bina" placeholder="Binaire" pattern="[0-1]*" onkeyup="binaireModif(this)"><br>
+    <input type="text" id="hexa" placeholder="Hexa" pattern="[0]{1}[x]{1}[0-9|A-f|a-f]*" onkeyup="hexaModif(this)" value="0x"> <br>
+    <input type="text" id="deci" placeholder="Decimal" pattern="[0-9]*" onkeyup="decimalModif(this)"><br>
     <canvas id="dieux" width="150" height="500"></canvas>
+    <canvas id="rectLine" width="600" height="500"></canvas>
+    <canvas id="rectAuto" width="600" height="500"></canvas>
     <script src="script/script.js"></script>
     <script>
         lineCanvas("dieux", 20, 20, 63, 73, 5)//main gauche
