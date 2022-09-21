@@ -8,12 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="bina" placeholder="Binaire" pattern="[0-1]*" onkeypress="binaireModif(this)"><br>
-    <input type="text" id="hexa" placeholder="Hexa" pattern="[0]{1}[x]{1}[0-9|A-f|a-f]*" onkeypress="hexaModif(this)" value="0x"> <br>
-    <input type="text" id="deci" placeholder="Decimal" pattern="[0-9]*" onkeypress="decimalModif(this)"><br>
-    <canvas id="dieux" width="150" height="250"></canvas>
-    <canvas id="rectangle" width="500" height="300"></canvas>
-    <canvas id="rectline" width="500" height="300"></canvas>
+    <input type="text" id="bina" placeholder="Binaire" pattern="[0-1]*" onkeyup="binaireModif(this)"><br>
+    <input type="text" id="hexa" placeholder="Hexa" pattern="[0]{1}[x]{1}[0-9|A-f|a-f]*" onkeyup="hexaModif(this)" value="0x"> <br>
+    <input type="text" id="deci" placeholder="Decimal" pattern="[0-9]*" onkeyup="decimalModif(this)"><br>
+    <canvas id="dieux" width="150" height="500"></canvas>
+    <canvas id="rectLine" width="600" height="500"></canvas>
+    <canvas id="rectAuto" width="600" height="500"></canvas>
     <script src="script/script.js"></script>
     <script>
         lineCanvas("dieux", 20, 20, 63, 73, 5)//main gauche
@@ -32,34 +32,7 @@
         circleCanvas("dieux", 106, 200, 13, 5);
         circleCanvas("dieux", 20, 200, 13, 5);
 
-        rectangle("rectangle", "hello", 10, 50, 10, 50, 0, 250, 250);
-        rectangle("rectangle", "hello", 90, 40, 10, 100, 194, 140, 7);
-        rectangle("rectangle", "hello", 140, 60, 10, 40, 255, 113, 113);
-
-        roundRect(10, 10, 50, 50, 20);
-
-        let cordoner1 = [80, 50 ,10, 50];
-        let color1 = [0, 250 , 250];
-        let text = "Hello";
-
-        let cordoner2 = [10, 40, 80, 100];
-        let color2 = [194, 140, 7];
-        let text2 = "Hello";
-
-        let cordoner3 = [140, 60, 80, 40];
-        let color3 = [255, 113, 113];
-        let text3 = "Hello";
-
-        let rectangle1 = [0, cordoner1, color1, text];
-        let rectangle2 = [1, cordoner2, color2, text];
-        let rectangle3 = [1, cordoner3, color3, text];
-
-        let rect = [rectangle1, rectangle2, rectangle3];
-
-
-        rectLine('rectline', rect);
-
-
+        
 
 
     </script>

@@ -23,13 +23,48 @@ function binaryToHexadecomal(binaryValue) {
 }
 
 function verifBinaire(target, valu) {
-    let lastValu = valu[valu.length];
-    console.log (lastValu)
-    if (lastValu != 0){
-        valu = valu.substring(0, valu.length-1);
+
+    if (valu == "") {
+        return 0;
     }
 
-    target.value = valu; 
+    let lastValu = valu[valu.length-1];
+    if (!lastValu.match(/[0-1]/g)){
+        valu = valu.substring(0, valu.length-1);
+        target.value = valu; 
+    }
+
+
+}
+
+function verifHexa(target, valu) {
+
+    if (valu == "") {
+        return 0;
+    }
+
+    let lastValu = valu[valu.length-1];
+    if (!lastValu.match(/[0-9|a-f]/gi)){
+        valu = valu.substring(0, valu.length-1);
+        console.log('bite', lastValu)
+        target.value = "0x" + valu; 
+    }
+
+
+}
+
+function verifDeci(target, valu) {
+
+    if (valu == "") {
+        return 0;
+    }
+
+    let lastValu = valu[valu.length-1];
+    if (!lastValu.match(/[0-9]/g)){
+        valu = valu.substring(0, valu.length-1);
+        target.value = valu; 
+    }
+
 
 }
 
@@ -37,8 +72,12 @@ function binaireModif(num){
     let valu =num.value;
     let hexa = document.getElementById("hexa");
     let deci = document.getElementById("deci");
-    verifBinaire(num,valu);
-    console.log(num);
+
+    if (valu == "") {
+        return 0;
+    }
+
+    verifBinaire(num,valu.toString());
 
     deci.value = binaryToDecimal(valu);
     hexa.value = "0x" + binaryToHexadecomal(valu);
@@ -48,8 +87,15 @@ function hexaModif(num){
     let valu =num.value;
     let bina = document.getElementById("bina");
     let deci = document.getElementById("deci");
-    
-    console.log(num)
+    valu = valu.toString();
+    valu = valu.replace(/[0]{1}[x]{1}/g, "")
+    console.log(valu)
+
+    if (valu == "") {
+        return 0;
+    }
+
+    verifHexa(num,valu.toString());
 
     deci.value = hexaToDecimal(valu);
     bina.value = hexaToBinayr(valu);
@@ -59,6 +105,12 @@ function decimalModif(num){
     let valu =num.value;
     let hexa = document.getElementById("hexa");
     let bina = document.getElementById("bina");
+
+    if (valu == "") {
+        return 0;
+    }
+
+    verifDeci(num,valu.toString());
     
     console.log(num)
 
@@ -100,7 +152,6 @@ function circleCanvas(cible, x1, y1 ,size, reduce,) {
         ctx.fillStyle = 'lightgrey';
         ctx.arc(x1, y1, lessSize, 0, 2 * Math.PI);
         ctx.fill();
-        
         ctx.closePath();
 
         
@@ -121,85 +172,199 @@ function lineCanvas(cible, x1, y1, x2, y2, size) {
     }
 }
 
-function center(x2) {
-    let ret = (x2/4);
-    return ret;
-}
 
-function rectangle(id, texte, x1, x2, y1, y2, r, b, g) {
-    let canvas = document.getElementById(id);
+function rountedRectangle(canvas, color, text, x, y, width, height, radius) {
+    let xText = width;
+    let yText = height;
+    width = width*2;
+    height = height*2
+    if (width < 2 * radius) 
+        radius = width / 2;
+    if (height < 2 * radius)
+        radius = height / 2;
+
     if (canvas.getContext) {
-        function roundRect(x, y, w, h, radius)
-{   
-        var canvas = document.getElementById("canvas6");
-        var context = canvas.getContext("2d");
-        var r = x + w;
-        var b = y + h;
-        context.beginPath();
-        context.strokeStyle="green";
-        context.lineWidth="4";
-        context.moveTo(x+radius, y);
-        context.lineTo(r-radius, y);
-        context.quadraticCurveTo(r, y, r, y+radius);
-        context.lineTo(r, y+h-radius);
-        context.quadraticCurveTo(r, b, r-radius, b);
-        context.lineTo(x+radius, b);
-        context.quadraticCurveTo(x, b, x, b-radius);
-        context.lineTo(x, y+radius);
-        context.quadraticCurveTo(x, y, x+radius, y);
-        context.stroke();
-}
-
+        let ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(x + radius, y);
+        ctx.arcTo(x + width, y, x + width, y + height, radius);
+        ctx.arcTo(x + width, y + height, x, y + height, radius);
+        ctx.arcTo(x, y + height, x, y, radius);
+        ctx.arcTo(x, y, x + width, y, radius);
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.fillStyle = 'black';
+        ctx.font = '20px serif';
+        console.log(width/(20*text.length))
+        ctx.fillText(text, x + xText-20*(text.length/2), y + yText);
+        ctx.closePath();
     }
 }
 
-function roundRect(x, y, w, h, radius)
-{
-    console.log(x, y)
-    var canvas = document.getElementById("rectangle");
-    var context = canvas.getContext("2d");
-    var r = x + w;
-    var b = y + h;
-    context.beginPath();
-    context.strokeStyle="green";
-    context.fillStyle="green";
-    context.lineWidth="4";
-    context.moveTo(x+radius, y);
-    context.lineTo(r-radius, y);
-    context.quadraticCurveTo(r, y, r, y+radius);
-    context.lineTo(r, y+h-radius);
-    context.quadraticCurveTo(r, b, r-radius, b);
-    context.lineTo(x+radius, b);
-    context.quadraticCurveTo(x, b, x, b-radius);
-    context.lineTo(x, y+radius);
-    context.quadraticCurveTo(x, y, x+radius, y);
-    context.stroke();
-    context.fill();
-}
+let rectLine = document.getElementById("rectLine");
+rountedRectangle(rectLine, "lightblue", "ok",0, 0, 100, 50, 8);
+rountedRectangle(rectLine, "orange", "ok",220, 100, 50, 100, 8);
+rountedRectangle(rectLine, "lightpink", "ok",340, 0, 100, 50, 8);
 
-function rectLine(target, rect) {
+class Rectangle {
+    /**
+     * constructor int the rectangle
+	 * @param {HTMLElement} canvas 
+	 * @param {string} color
+     * @param {string} text
+     * @param {int} x   position x in the canvas
+     * @param {int} y   position y in the canvas
+     * @param {int} width
+     * @param {int} height
+     * @param {int} radius
+	 */
 
-    let rectNumberByID = [];
+    constructor(canvas, color, text, x, y, width, height, radius) {
+        this.canvas = canvas;
+        this.color = color;
+        this.cordonate = Object.assign({}, {
+            x: x,
+            y:y,
+            width: width,
+            height: height,
+            radius: radius
+        });
 
-    rect.forEach(element => {
-        console.log(rectNumberByID.length, element[0])
-
-        if (rectNumberByID.length < element[0]) {
-            console.log('d')
+        if (canvas.getContext) {
+            this.ctx = canvas.getContext("2d");
+            this.draw();
+            this.writeText(text);
         } else {
-            rectNumberByID
+            console.error("Canvas is not define");
         }
 
-        rectangle(target,
-            element[3],
-            element[1][0],
-            element[1][1],
-            element[1][2],
-            element[1][3],
-            element[2][0],
-            element[2][1],
-            element[2][2],
-            )
-    });
+    }
+    
+    draw() {
+        let x = this.cordonate.x;
+        let y = this.cordonate.y;
+        let radius = this.cordonate.radius;
+        let width = this.cordonate.width*2;
+        let height = this.cordonate.height*2;
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(x + radius, y);
+        this.ctx.arcTo(x + width, y, x + width, y + height, radius);
+        this.ctx.arcTo(x + width, y + height, x, y + height, radius);
+        this.ctx.arcTo(x, y + height, x, y, radius);
+        this.ctx.arcTo(x, y, x + width, y, radius);
+        this.ctx.fillStyle = this.color;
+        this.ctx.fill();
+        this.ctx.closePath();
+    }
+    /**
+     * 
+     * @param {string} text 
+     */
+    writeText(text) {
+        let xText = this.cordonate.x + this.cordonate.width-20*(text.length/2);
+        let yText = this.cordonate.y + this.cordonate.height; 
+        this.ctx.beginPath();
+        this.ctx.fillStyle = 'black';
+        this.ctx.font = '20px serif';
+        this.ctx.fillText(text, xText, yText);
+        this.ctx.closePath();
+    }
+
+    delete() {
+        this.ctx.clearRect(this.cordonate.x,
+            this.cordonate.y,
+            this.cordonate.width*2,
+            this.cordonate.height*2
+        );
+    }
+}
+
+class AutoDatagrame {
+    /**
+     * 
+     * @param {HTMLElement} canvas 
+     * @param {Array} rectangle liste rectangle
+     * 
+     */
+    constructor(canvas, rectangle = []){
+        this.canvas = canvas;
+        this.rectangle = [];
+        this.traceLigne = []
+        rectangle.forEach(element => {
+            this.addRectangle(element.id,
+                element.x,
+                element.y,
+                element.width,
+                element.height,
+                element.radius,
+                element.color,
+                element.text
+                )
+        });
+        this.autoDetectLigne()
+    }
+
+    autoDetectLigne() {
+        for (let i = 0; i < this.rectangle.length; i++){
+            for (let i2 = i; i2 < this.rectangle.length; i2++) {
+                if (this.rectangle[i].id < this.rectangle[i2].id) {
+                    console.log(i, i2)
+                }
+            }
+        }
+    }
+
+    addRectangle(id, x, y, w, h, r, color, texte){
+        let eRectangle = Object.assign({},{
+            id: id,
+            x: x,
+            y: y,
+            width: w,
+            height: h,
+            radius: r,
+            color: color,
+            text: texte
+        });
+        this.rectangle.push(eRectangle);
+        new Rectangle(this.canvas, color, texte, x, y, w, h, r)
+    }
 
 }
+let rectTEste = document.getElementById("rectAuto");
+
+tes = Object.assign({},{
+    id: 1,
+    x: 0,
+    y: 0,
+    width: 100,
+    height: 50,
+    radius: 8,
+    color: "lightpink",
+    text: "jesus"
+});
+
+tes1 = Object.assign({},{
+    id: 2,
+    x: 220,
+    y: 100,
+    width: 50,
+    height: 100,
+    radius: 8,
+    color: "orange",
+    text: "jesus"
+});
+
+tes2 = Object.assign({},{
+    id: 1,
+    x: 340,
+    y: 0,
+    width: 100,
+    height: 50,
+    radius: 8,
+    color: "lightblue",
+    text: "lightpink"
+});
+
+arr = [tes, tes1, tes2]
+let e = new AutoDatagrame(rectTEste, arr)
