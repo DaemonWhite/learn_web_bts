@@ -1,6 +1,12 @@
 class Etudiant
 {
     //Constructeur
+    /**
+     * 
+     * @param {int} nom 
+     * @param {String} prenom 
+     * @param {int} numero 
+     */
     constructor( nom, prenom, numero) {
         this.nom = nom;
         this.prenom  = prenom;
@@ -18,15 +24,21 @@ class Etudiant
     get getPrenom() {
         return this.prenom;
     }
-
+    /**
+     * @param {int} unNumero
+     */
     set changerNumero(unNumero) {
         this.numero = unNumero;
     }
-
+    /**
+     * @param {String} unPrenom
+     */
     set changerPrenom(unPrenom) {
         this.prenom = unPrenom;
     }
-
+    /**
+     * @param {String} nom
+     */
     set changerNom(nom) {
         this.nom = nom;
     }
@@ -34,13 +46,24 @@ class Etudiant
 
 class Pays
 {
+    /**
+     * 
+     * @param {HTMLelement} element 
+     * @param {String} pays 
+     * @param {float} pnb 
+     * @param {int} annee 
+     */
     constructor( element, pays, pnb, annee) {
         this.root = element;
         this.pays = pays;
         this.pnb = parseFloat(pnb);
         this.annee = annee;
     }
-
+    /**
+     * 
+     * @param {float} pnbSuivante 
+     * @returns 
+     */
     tauxCroissance(pnbSuivante) {
         let ret = ((pnbSuivante  -  this.pnb)/this.pnb  *  100);
         this.pnb = pnbSuivante;
