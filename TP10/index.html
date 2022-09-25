@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <h1>Ex1 -> console</h1>
     <h1>Ex2</h1>
     <div>
         <h2>PNB</h2>
@@ -32,14 +33,54 @@
             e.changerPrenom="Jules";
             console.log(e.getNom+ " " + e.getPrenom + " " + e.getNumero);
         }
-
+        //EX 2
         let pnb = document.getElementById("pnb");
-        let tPnb = document.getElementById("tPnb");
+        
         let calcPnb = new Pays(pnb, "France", 1600, 2005);
         calcPnb.affiche()
-        calcPnb.testPnb(tPnb)
+
+        function testPnb() {
+            let tPnb = document.getElementById("tPnb");
+
+            let paysTab = [];
+            let write = "";
+
+            paysTab.push(Object.assign({},
+                {
+                    pays: "Seychelles",
+                    pnb: 6700.0,
+                    nPnb: 7250.0,
+                    anne: 2003
+                }));
+
+            paysTab.push(Object.assign({},
+                {
+                    pays: "Egypte",
+                    pnb: 1430.0,
+                    nPnb: 1405.0,
+                    anne: 2003
+                }));
+            
+            paysTab.forEach(e => {
+
+                let E = new Pays(tPnb, e.pays, e.pnb, e.anne) 
+
+                E.affiche();
+                let croissance = E.tauxCroissance(e.nPnb);
+
+                E.affiche();
+
+                let div = document.createElement('div');
+                tPnb.appendChild(div)
+
+                div.innerHTML = "Taux de croissance pour " + ++e.anne + ", " + e.nPnb + " -> " + croissance + "% <br><br>" ;
+
+            });
+
+        }
 
         main();
+        testPnb();
     </script>
 </body>
 </html>

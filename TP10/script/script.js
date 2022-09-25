@@ -49,73 +49,35 @@ class Pays
     }
 
     affiche() {
-        this.root.innerHTML = 
-        "Pays : " + this.pays + "<br>" +
-        "PNB : " + this.pnb + "<br>" +
-        "Année : " + this.annee + "<br>";
+
+        let div = document.createElement('div');
+        this.root.appendChild(div)
+
+        div.innerHTML =
+        "Pays " + this.pays+ 
+        ": PNB de " + this.pnb + 
+        " $ pour l'année " + this.annee + "<br>";
     }
 
-    testPnb(element="") {
-        if (element == "") {
-            element = this.root;
-        }
+    
+}
 
-        let paysTab = [];
-        let write = "";
+class PolynomeDegre1 {
 
-        let tmpPays = this.pays;
-        let tmpPnb = this.pnb;
-        let tmpAnnee = this.annee;
+    constructor(a, b) {
+        this.a = a;
+        this.b = b;
+    }
 
-        paysTab.push(Object.assign({},
-            {
-                pays: "Seychelles",
-                pnb: 6700.0,
-                nPnb: 7250.0,
-                anne: 2003
-            }));
+    evaluation(x) {
+        let f = a*x+b
+        return f;
+    }
+    calculeRacine() {
 
-        paysTab.push(Object.assign({},
-            {
-                pays: "Egypte",
-                pnb: 1430.0,
-                nPnb: 1405.0,
-                anne: 2003
-               }));
-        
-        paysTab.forEach(e => {
-            this.pays = e.pays;
-            this.pnb = e.pnb;
-            this.annee = e.anne;
+    }
 
-
-
-            write += 
-            "Pays " + this.pays+ 
-            ": PNB de " + this.pnb + 
-            " $ pour l'année " + this.annee + "<br>";
-
-            let croissance = this.tauxCroissance(e.nPnb);
-
-            write += 
-            "Pays " + this.pays+ 
-            ": PNB de " + this.pnb + 
-            " $ pour l'année " + this.annee + "<br>";
-
-            
-
-            write += "Taux de croissance pour " + this.annee + ", " + this.pnb + " -> " + croissance + "% <br><br>" ;
-
-            
-
-        });
-
-        element.innerHTML = write
-
-        this.pays = tmpPays;
-        this.pnb = tmpPnb;
-        this.annee = tmpAnnee;
-        
+    affiche() {
 
     }
 }
