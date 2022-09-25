@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/script.js"></script>
+</head>
+<body>
+
+    <h1>Ex2</h1>
+    <div>
+        <h2>PNB</h2>
+        <p id="pnb">
+
+        </p>
+
+        <h2>PNB teste</h2>
+        <p id="tPnb">
+
+        </p>
+    </div>
+    
+
+    <script>
+        function main() {
+            e = new Etudiant("Dupond", "Jacques", 0);
+            console.log(e.getNom+ " " + e.getPrenom + " " + e.getNumero);
+            e.changerNumero=12;
+            e.changerNom="Durand";
+            e.changerPrenom="Jules";
+            console.log(e.getNom+ " " + e.getPrenom + " " + e.getNumero);
+        }
+
+        let pnb = document.getElementById("pnb");
+        let tPnb = document.getElementById("tPnb");
+        let calcPnb = new Pays(pnb, "France", 1600, 2005);
+        calcPnb.affiche()
+        calcPnb.testPnb(tPnb)
+
+        main();
+    </script>
+</body>
+</html>
