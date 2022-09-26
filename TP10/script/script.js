@@ -51,7 +51,7 @@ class Pays
      * @param {HTMLelement} element 
      * @param {String} pays 
      * @param {float} pnb 
-     * @param {int} annee 
+     * @param {int} annee
      */
     constructor( element, pays, pnb, annee) {
         this.root = element;
@@ -74,7 +74,7 @@ class Pays
     affiche() {
 
         let div = document.createElement('div');
-        this.root.appendChild(div)
+        this.root.appendChild(div);
 
         div.innerHTML =
         "Pays " + this.pays+ 
@@ -93,11 +93,76 @@ class PolynomeDegre1 {
     }
 
     evaluation(x) {
-        let f = a*x+b
+        let f = this.a*x+this.b
         return f;
     }
     calculeRacine() {
+        return (-this.b/this.a);
+    }
 
+    affiche() {
+        let ret = "a=" + this.a + "<br>";
+        ret += "b=" + this.b + "<br>";
+        ret += "f(x)=";
+        if (this.a!=0) {
+            ret += "x";
+        }
+
+        if (this.b != 0) {
+            if (this.b > 0) {
+                ret += "+"
+            }
+
+            ret += this.b;
+        }
+
+        ret += "<br>Racine=";
+        if (this.b < 0) {
+            ret += (this.b*-1);
+        } else {
+            ret += "-" + this.b; 
+        }
+        ret += "/" + this.a;
+
+        return ret;
+    }
+}
+
+class PolynomeDegre2 {
+    constructor(element, a, b, c) {
+        this.a = a;   
+        this.b = b;
+        this.c = c;
+    }
+
+    evaluation(x) {
+
+        let p = this.a * (x*x) + this.b * this.c
+
+        return p;
+    }
+    /**
+     * 
+     * @returns {Array} si array vide impossible
+     */
+    calculeRacines(){
+        let delta = (this.b*this.b) - 4*this.a*this.c;
+
+        let ret = [];
+
+        if (delta > 0) {
+            let calcA = (-this.b - Math.sqrt(this.delta))/2*this.a;
+            ret.push(calcA);
+
+            let calcB = (-this.b + Math.sqrt(this.delta))/2*this.a;
+            ret.push(calcB);
+
+            
+        } else if (delta == 0) {
+            ret.push(-this.b/2*this.a);
+        }
+
+        return ret;
     }
 
     affiche() {

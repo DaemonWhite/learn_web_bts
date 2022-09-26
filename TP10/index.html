@@ -22,6 +22,13 @@
 
         </p>
     </div>
+    <h1>Ex3</h1>
+    <div>
+        <h2>Affichage</h2>
+        <div id="ex3a"></div>
+        <h2>Retour calcule</h2>
+        <div id="ex3b"></div>
+    </div>
     
 
     <script>
@@ -81,6 +88,21 @@
 
         main();
         testPnb();
+
+        function testPolynome() {
+            const a =10;
+            const b =-5;
+            const x = 2;
+            let poly1 = new PolynomeDegre1(a, 5);
+            document.getElementById("ex3a").innerHTML = poly1.affiche();
+
+            let ex3b = document.getElementById("ex3b");
+
+            ex3b.innerHTML = "f("+ x +")=" + poly1.evaluation(x) ;
+            ex3b.innerHTML = "Racine=" + poly1.calculeRacine();
+        }
+
+        testPolynome();
     </script>
 </body>
 </html>
