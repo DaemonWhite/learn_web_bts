@@ -17,7 +17,7 @@
 
         </p>
 
-        <h2>PNB teste</h2>
+        <h2>PNB test</h2>
         <p id="tPnb">
 
         </p>
@@ -28,6 +28,14 @@
         <div id="ex3a"></div>
         <h2>Retour calcule</h2>
         <div id="ex3b"></div>
+    </div>
+
+    <h1>Ex4</h1>
+    <div>
+        <h2>Affichage</h2>
+        <div id="ex4a"></div>
+        <h2>Retour calcule</h2>
+        <div id="ex4b"></div>
     </div>
     
 
@@ -102,7 +110,27 @@
             ex3b.innerHTML = "Racine=" + poly1.calculeRacine();
         }
 
+        function testPolynome2() {
+            const a = 2;
+            const b = 4;
+            const c = -1; 
+            const x = 2;
+            let poly2 = new PolynomeDegre2(a, b, c);
+            document.getElementById("ex4a").innerHTML = poly2.affiche();
+
+            let ex4b = document.getElementById("ex4b");
+
+            let as = poly2.calculeRacines();
+
+            ex4b.innerHTML = "f("+ x +")=" + poly2.evaluation(x) + "<br>" ;
+            as.forEach(element => {
+                ex4b.innerHTML += "Racine=" + element + "<br>";
+            });
+        }
+        
+
         testPolynome();
+        testPolynome2();
     </script>
 </body>
 </html>

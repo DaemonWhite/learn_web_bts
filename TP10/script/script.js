@@ -129,7 +129,7 @@ class PolynomeDegre1 {
 }
 
 class PolynomeDegre2 {
-    constructor(element, a, b, c) {
+    constructor( a, b, c) {
         this.a = a;   
         this.b = b;
         this.c = c;
@@ -151,10 +151,10 @@ class PolynomeDegre2 {
         let ret = [];
 
         if (delta > 0) {
-            let calcA = (-this.b - Math.sqrt(this.delta))/2*this.a;
+            let calcA = (-this.b - Math.sqrt(delta))/2*this.a;
             ret.push(calcA);
 
-            let calcB = (-this.b + Math.sqrt(this.delta))/2*this.a;
+            let calcB = (-this.b + Math.sqrt(delta))/2*this.a;
             ret.push(calcB);
 
             
@@ -166,6 +166,43 @@ class PolynomeDegre2 {
     }
 
     affiche() {
+        let ret = "f(x) = ( ";
+        let retAdd = "f(x) = ( ";
+
+        let delta = (this.b*this.b) - 4*this.a*this.c;
+
+
+        if (delta > 0) {
+
+            if (this.b != 0) {
+                if (this.b > 0) {
+                    ret += " - ";
+                    retAdd += " - "
+                }
+                ret += this.b
+                retAdd += this.b
+            }
+
+            ret += " - &#8730( &#916 ))/2*";
+            retAdd += " + &#8730( &#916 ))/2*";
+
+            ret += this.a
+            retAdd += this.b
+
+        ret += "<br>" + retAdd
+
+    } else if (delta == 0) {
+        if (this.b < 0) {
+            ret += "-"
+        }
+
+        ret += this.b + "/" + "2*" + this.a + ")"
+
+    } {
+        ret += "0)"
+    }
+
+    return ret;
 
     }
 }
